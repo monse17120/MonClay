@@ -1,0 +1,181 @@
+:root {
+  --color-pink: #ffd1dc;
+  --color-blue: #c7ceea;
+  --color-green: #b5ead7;
+  --color-purple: #e0bbe4;
+  --color-mint: #c8e6c9;
+  --color-yellow: #fdfd96;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff5f8;
+  color: #5a5a5a;
+}
+
+.kawaii-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kawaii-button {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.kawaii-button:hover {
+  transform: scale(1.05);
+}
+
+.kawaii-button:active {
+  transform: scale(0.95);
+}
+
+.product-card {
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-tab {
+  transition: all 0.3s ease;
+}
+
+.category-tab.active {
+  transform: translateY(-3px);
+}
+
+.cart-item {
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateX(5px);
+}
+
+.image-selector {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.image-selector:hover {
+  transform: scale(1.1);
+}
+
+.image-selector.active {
+  border: 3px solid #ff85a2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Iconos kawaii */
+.kawaii-icon {
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+/* Banner más ancho */
+.hero-banner {
+  background-color: #ff85a2;
+  padding: 3rem 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes bounce-once {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.animate-bounce {
+  animation: bounce-once 0.5s ease-in-out;
+}
+
+/* Estilo para el botón de añadir al carrito */
+.add-to-cart-main {
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-main:hover {
+  background-color: #ff85a2 !important;
+  color: white;
+}
+
+/* Estilo para la notificación de añadido al carrito */
+.cart-notification {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Estilo para la sección de descuentos */
+.discount-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #ff85a2;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transform: rotate(15deg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.discount-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.discount-card::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  background-color: #ff85a2;
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+/* Estilo para la ubicación */
+.location-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
