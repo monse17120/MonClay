@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Monclay - Tienda Kawaii</title>
+    <title>MonClay - Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Varela+Round&amp;display=swap"
@@ -11,7 +12,7 @@
     <style>
       :root {
         --color-pink: #ffd1dc;
-        --color-blue: #c7ceea;
+        --color-blue: #bfc9f4;
         --color-green: #b5ead7;
         --color-purple: #e0bbe4;
         --color-mint: #c8e6c9;
@@ -20,8 +21,8 @@
 
       body {
         font-family: "Poppins", sans-serif;
-        background-color: #fff5f8;
-        color: #5a5a5a;
+        background-color: #ffdbf5;
+        color: #232323;
       }
 
       .kawaii-shadow {
@@ -80,7 +81,7 @@
       }
 
       .image-selector.active {
-        border: 3px solid #ff85a2;
+        border: 3px solid #ffc5d3;
       }
 
       @keyframes fadeIn {
@@ -104,11 +105,12 @@
 
       /* Banner más ancho */
       .hero-banner {
-        background-color: #ffbaca;
+        background-color: #ffb6de;
         padding: 3rem 0;
+        padding-bottom: 70px;
         width: 100%;
         position: relative;
-        overflow: hidden;
+        overflow: visible;
       }
 
       @keyframes bounce-once {
@@ -131,7 +133,7 @@
       }
 
       .add-to-cart-main:hover {
-        background-color: #ff85a2 !important;
+        background-color: #fbc1ff !important;
         color: white;
       }
 
@@ -194,18 +196,15 @@
   </head>
   <body>
     <div class="min-h-screen flex flex-col">
-      <!-- Header -->
       <header class="bg-white kawaii-shadow sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3">
           <div class="flex justify-between items-center">
-            <!---logo--->
             <div class="flex items-center">
-              <div class="text-3xl font-bold" style="color: #ffa7df">
-                <span class="text-4xl">🌸</span> Monclay
+              <img src="images/1.png" alt="Monclay Logo" class="h-20 mr-1" />
+              <div class="text-3xl font-bold" style="color: #ffb9de">
+                Monclay
               </div>
             </div>
-
-            <!-- Navigation -->
             <nav class="hidden md:flex space-x-6">
               <a
                 href="#"
@@ -244,8 +243,6 @@
                 >Descuentos</a
               >
             </nav>
-
-            <!-- Cart and Mobile Menu -->
             <div class="flex items-center space-x-4">
               <div class="relative kawaii-button">
                 <button
@@ -261,7 +258,6 @@
                   >
                 </button>
               </div>
-
               <button
                 id="mobile-menu-button"
                 class="md:hidden p-2 rounded-full"
@@ -271,8 +267,6 @@
               </button>
             </div>
           </div>
-
-          <!-- Mobile Navigation -->
           <div id="mobile-menu" class="md:hidden mt-3 pb-3 hidden">
             <div class="flex flex-col space-y-2">
               <a
@@ -315,739 +309,648 @@
           </div>
         </div>
       </header>
-
-      <!-- Hero Banner -->
-      <div class="relative overflow-hidden w-full hero-banner">
+      <div class="relative overflow-hidden w-full hero-banner bg-pink-100">
         <div class="container mx-auto px-4 py-16 md:py-24">
           <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-3/5 text-center md:text-left mb-8 md:mb-0">
-              <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Productos Hechos con Amor
-              </h1>
-              <p class="text-lg mb-8 text-white opacity-90 max-w-2xl">
-                Descubre nuestra colección de productos de porcelana fría,
-                madera y acrílico cortados con láser.
-              </p>
-              <button
-                class="kawaii-button py-3 px-8 rounded-full font-bold bg-white text-pink-500 shadow-lg"
-              >
-                Explorar Ahora
-              </button>
-            </div>
-            <div class="md:w-2/5 flex justify-center">
-              <!-- Logo de Monclay -->
-              <div class="relative w-64 h-64 md:w-80 md:h-80">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fill="#FFFFFF"
-                    d="M45.7,-53.8C59.1,-42.7,70,-28.5,73.3,-12.7C76.7,3.1,72.5,20.5,63.2,34.1C53.9,47.7,39.5,57.5,23.4,63.9C7.3,70.3,-10.5,73.3,-26.9,68.7C-43.3,64.1,-58.3,51.9,-67.1,36.1C-75.9,20.3,-78.5,0.9,-73.9,-16.2C-69.3,-33.3,-57.5,-48,-43.2,-59C-28.9,-70,-14.5,-77.3,0.5,-77.9C15.4,-78.5,32.3,-64.9,45.7,-53.8Z"
-                    transform="translate(100 100)"
-                  ></path>
-                </svg>
-
-                <!-- Texto del logo -->
-                <div
-                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+            <div
+              class="flex flex-col md:flex-row items-center justify-between md:space-x-8"
+            >
+              <div class="md:w-3/5 text-center md:text-left mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  Productos Hechos con Amor
+                </h1>
+                <p class="text-lg mb-8 text-white opacity-90 max-w-2xl -mt-4">
+                  Descubre nuestra colección de productos de porcelana fría,
+                  madera y acrílico cortados con láser.
+                </p>
+                <button
+                  class="py-3 px-8 rounded-full font-bold bg-pink-300 text-white shadow-lg hover:bg-pink-400 transition duration-300"
                 >
-                  <div class="text-4xl font-bold" style="color: #ff85a2">
-                    <span class="text-5xl">🌸</span>
-                  </div>
-                  <div class="text-2xl font-bold mt-2 text-white">Monclay</div>
-                  <div class="text-sm mt-1 text-white">Kawaii Crafts</div>
-                </div>
+                  Explorar Ahora
+                </button>
+              </div>
+              <div class="md:w-2/5 flex justify-center md:justify-end">
+                <img
+                  src="images/1.png"
+                  alt="Logo de Monclay"
+                  class="w-[350px] h-auto"
+                />
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Decorative elements -->
-        <div class="absolute -bottom-6 left-0 right-0">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path
-              fill="#FFF5F8"
-              fill-opacity="1"
-              d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
         </div>
       </div>
-
-      <!-- Main Content -->
-      <main class="flex-grow container mx-auto px-4 py-8">
-        <!-- Category Tabs (Mobile) -->
-        <div class="md:hidden overflow-x-auto whitespace-nowrap mb-6 pb-2">
-          <div class="inline-flex space-x-3">
-            <button
-              class="category-tab active px-4 py-2 rounded-full font-medium"
-              style="background-color: var(--color-pink)"
-            >
-              Todos
-            </button>
-            <button
-              class="category-tab px-4 py-2 rounded-full font-medium"
-              style="background-color: var(--color-purple)"
-            >
-              Porcelana Fría
-            </button>
-            <button
-              class="category-tab px-4 py-2 rounded-full font-medium"
-              style="background-color: var(--color-blue)"
-            >
-              Madera Láser
-            </button>
-            <button
-              class="category-tab px-4 py-2 rounded-full font-medium"
-              style="background-color: var(--color-green)"
-            >
-              Acrílico Láser
-            </button>
-            <button
-              class="category-tab px-4 py-2 rounded-full font-medium"
-              style="background-color: var(--color-mint)"
-            >
-              Cajas Pintadas
-            </button>
-            <button
-              class="category-tab px-4 py-2 rounded-full font-medium"
-              style="background-color: var(--color-yellow)"
-            >
-              Descuentos
-            </button>
-          </div>
-        </div>
-
-        <!-- Sección de Descuentos (inicialmente oculta) -->
-        <div id="discounts-section" class="hidden mb-10">
-          <div class="flex items-center mb-6">
-            <div
-              class="w-10 h-10 rounded-full flex items-center justify-center mr-3"
-              style="background-color: var(--color-yellow)"
-            >
-              <span class="text-2xl">🎉</span>
-            </div>
-            <h2 class="text-2xl font-bold">Ofertas Especiales</h2>
-          </div>
-
+    </div>
+    <div class="md:w-2/5 flex justify-center">
+      <div class="flex items-center">
+        <div class="flex items-center max-w-5xl mx-auto px-4 py-8">
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-          >
-            <!-- Discount Product 1 -->
-            <div
-              class="product-card kawaii-shadow bg-white rounded-3xl overflow-hidden fade-in discount-card relative"
-            >
-              <div class="discount-badge">-20%</div>
-              <div class="h-48 overflow-hidden relative">
-                <div
-                  class="w-full h-full flex items-center justify-center"
-                  style="background-color: var(--color-pink)"
-                >
-                  <span class="text-6xl">🦄</span>
-                </div>
-                <div
-                  class="absolute top-2 left-2 w-8 h-8 rounded-full flex items-center justify-center"
-                  style="background-color: var(--color-purple)"
-                >
-                  <span class="text-lg">🦄</span>
-                </div>
-              </div>
-              <div class="p-4">
-                <div class="flex items-center mb-2">
-                  <div
-                    class="w-8 h-8 rounded-full flex items-center justify-center mr-2"
-                    style="background-color: var(--color-pink)"
-                  >
-                    <span class="text-lg">🌸</span>
-                  </div>
-                  <h3 class="font-bold text-lg">Llavero Unicornio</h3>
-                </div>
-                <div class="flex items-center mb-2">
-                  <span
-                    class="text-lg font-bold line-through text-gray-400 mr-2"
-                    >$10.99</span
-                  >
-                  <span class="text-lg font-bold" style="color: #ff85a2"
-                    >$8.79</span
-                  >
-                </div>
-                <div class="flex justify-between items-center">
-                  <span
-                    class="text-sm py-1 px-3 rounded-full"
-                    style="background-color: var(--color-purple)"
-                  >
-                    Porcelana Fría
-                  </span>
-                  <div class="flex space-x-2">
-                    <button
-                      class="add-to-cart-main kawaii-button p-2 rounded-full"
-                      style="background-color: var(--color-pink)"
-                      data-id="d1"
-                    >
-                      <span class="text-xl">🛒</span>
-                    </button>
-                    <button
-                      class="view-product kawaii-button p-2 rounded-full"
-                      style="background-color: var(--color-blue)"
-                      data-id="d1"
-                    >
-                      <span class="text-xl">👁️</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Discount Product 2 -->
-            <div
-              class="product-card kawaii-shadow bg-white rounded-3xl overflow-hidden fade-in discount-card relative"
-            >
-              <div class="discount-badge">-15%</div>
-              <div class="h-48 overflow-hidden relative">
-                <div
-                  class="w-full h-full flex items-center justify-center"
-                  style="background-color: var(--color-blue)"
-                >
-                  <span class="text-6xl">🌈</span>
-                </div>
-                <div
-                  class="absolute top-2 left-2 w-8 h-8 rounded-full flex items-center justify-center"
-                  style="background-color: var(--color-blue)"
-                >
-                  <span class="text-lg">🌈</span>
-                </div>
-              </div>
-              <div class="p-4">
-                <div class="flex items-center mb-2">
-                  <div
-                    class="w-8 h-8 rounded-full flex items-center justify-center mr-2"
-                    style="background-color: var(--color-pink)"
-                  >
-                    <span class="text-lg">🌸</span>
-                  </div>
-                  <h3 class="font-bold text-lg">Caja Arcoíris</h3>
-                </div>
-                <div class="flex items-center mb-2">
-                  <span
-                    class="text-lg font-bold line-through text-gray-400 mr-2"
-                    >$24.99</span
-                  >
-                  <span class="text-lg font-bold" style="color: #ff85a2"
-                    >$21.24</span
-                  >
-                </div>
-                <div class="flex justify-between items-center">
-                  <span
-                    class="text-sm py-1 px-3 rounded-full"
-                    style="background-color: var(--color-mint)"
-                  >
-                    Cajas Pintadas
-                  </span>
-                  <div class="flex space-x-2">
-                    <button
-                      class="add-to-cart-main kawaii-button p-2 rounded-full"
-                      style="background-color: var(--color-pink)"
-                      data-id="d2"
-                    >
-                      <span class="text-xl">🛒</span>
-                    </button>
-                    <button
-                      class="view-product kawaii-button p-2 rounded-full"
-                      style="background-color: var(--color-blue)"
-                      data-id="d2"
-                    >
-                      <span class="text-xl">👁️</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Discount Product 3 -->
-            <div
-              class="product-card kawaii-shadow bg-white rounded-3xl overflow-hidden fade-in discount-card relative"
-            >
-              <div class="discount-badge">-25%</div>
-              <div class="h-48 overflow-hidden relative">
-                <div
-                  class="w-full h-full flex items-center justify-center"
-                  style="background-color: var(--color-green)"
-                >
-                  <span class="text-6xl">🌟</span>
-                </div>
-                <div
-                  class="absolute top-2 left-2 w-8 h-8 rounded-full flex items-center justify-center"
-                  style="background-color: var(--color-green)"
-                >
-                  <span class="text-lg">🌟</span>
-                </div>
-              </div>
-              <div class="p-4">
-                <div class="flex items-center mb-2">
-                  <div
-                    class="w-8 h-8 rounded-full flex items-center justify-center mr-2"
-                    style="background-color: var(--color-pink)"
-                  >
-                    <span class="text-lg">🌸</span>
-                  </div>
-                  <h3 class="font-bold text-lg">Llavero Estrella</h3>
-                </div>
-                <div class="flex items-center mb-2">
-                  <span
-                    class="text-lg font-bold line-through text-gray-400 mr-2"
-                    >$8.50</span
-                  >
-                  <span class="text-lg font-bold" style="color: #ff85a2"
-                    >$6.38</span
-                  >
-                </div>
-                <div class="flex justify-between items-center">
-                  <span
-                    class="text-sm py-1 px-3 rounded-full"
-                    style="background-color: var(--color-green)"
-                  >
-                    Acrílico Láser
-                  </span>
-                  <div class="flex space-x-2">
-                    <button
-                      class="add-to-cart-main kawaii-button p-2 rounded-full"
-                      style="background-color: var(--color-pink)"
-                      data-id="d3"
-                    >
-                      <span class="text-xl">🛒</span>
-                    </button>
-                    <button
-                      class="view-product kawaii-button p-2 rounded-full"
-                      style="background-color: var(--color-blue)"
-                      data-id="d3"
-                    >
-                      <span class="text-xl">👁️</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Discount Product 4 -->
-            <div
-              class="product-card kawaii-shadow bg-white rounded-3xl overflow-hidden fade-in discount-card relative"
-            >
-              <div class="discount-badge">-30%</div>
-              <div class="h-48 overflow-hidden relative">
-                <div
-                  class="w-full h-full flex items-center justify-center"
-                  style="background-color: var(--color-yellow)"
-                >
-                  <span class="text-6xl">🍰</span>
-                </div>
-                <div
-                  class="absolute top-2 left-2 w-8 h-8 rounded-full flex items-center justify-center"
-                  style="background-color: var(--color-yellow)"
-                >
-                  <span class="text-lg">🍰</span>
-                </div>
-              </div>
-              <div class="p-4">
-                <div class="flex items-center mb-2">
-                  <div
-                    class="w-8 h-8 rounded-full flex items-center justify-center mr-2"
-                    style="background-color: var(--color-pink)"
-                  >
-                    <span class="text-lg">🌸</span>
-                  </div>
-                  <h3 class="font-bold text-lg">Posavasos Pastel</h3>
-                </div>
-                <div class="flex items-center mb-2">
-                  <span
-                    class="text-lg font-bold line-through text-gray-400 mr-2"
-                    >$15.99</span
-                  >
-                  <span class="text-lg font-bold" style="color: #ff85a2"
-                    >$11.19</span
-                  >
-                </div>
-                <div class="flex justify-between items-center">
-                  <span
-                    class="text-sm py-1 px-3 rounded-full"
-                    style="background-color: var(--color-blue)"
-                  >
-                    Madera Láser
-                  </span>
-                  <div class="flex space-x-2">
-                    <button
-                      class="add-to-cart-main kawaii-button p-2 rounded-full"
-                      style="background-color: var(--color-pink)"
-                      data-id="d4"
-                    >
-                      <span class="text-xl">🛒</span>
-                    </button>
-                    <button
-                      class="view-product kawaii-button p-2 rounded-full"
-                      style="background-color: var(--color-blue)"
-                      data-id="d4"
-                    >
-                      <span class="text-xl">👁️</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+          ></div>
         </div>
-
-        <!-- Products Grid -->
+      </div>
+    </div>
+    <div class="absolute -bottom-6 left-0 right-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320">
+        <path
+          fill="#FFF5F8"
+          fill-opacity="1"
+          d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+    <main class="flex-grow container mx-auto px-4 py-8">
+      <div class="md:hidden overflow-x-auto whitespace-nowrap mb-6 pb-2">
+        <div class="inline-flex space-x-3">
+          <button
+            class="category-tab active px-4 py-2 rounded-full font-medium"
+            style="background-color: var(--color-pink)"
+          >
+            Todos
+          </button>
+          <button
+            class="category-tab px-4 py-2 rounded-full font-medium"
+            style="background-color: var(--color-purple)"
+          >
+            Porcelana Fría
+          </button>
+          <button
+            class="category-tab px-4 py-2 rounded-full font-medium"
+            style="background-color: var(--color-blue)"
+          >
+            Madera Láser
+          </button>
+          <button
+            class="category-tab px-4 py-2 rounded-full font-medium"
+            style="background-color: var(--color-green)"
+          >
+            Acrílico Láser
+          </button>
+          <button
+            class="category-tab px-4 py-2 rounded-full font-medium"
+            style="background-color: var(--color-mint)"
+          >
+            Cajas Pintadas
+          </button>
+          <button
+            class="category-tab px-4 py-2 rounded-full font-medium"
+            style="background-color: var(--color-yellow)"
+          >
+            Descuentos
+          </button>
+        </div>
+      </div>
+      <div id="discounts-section" class="hidden mb-10">
+        <div class="flex items-center mb-6">
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center mr-3"
+            style="background-color: var(--color-yellow)"
+          >
+            <span class="text-2xl">🎉</span>
+          </div>
+          <h2 class="text-2xl font-bold">Ofertas Especiales</h2>
+        </div>
         <div
-          id="products-container"
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
-          <!-- Products will be dynamically inserted here -->
-        </div>
-      </main>
-
-      <!-- About Us Section -->
-      <section class="bg-white py-16">
-        <div class="container mx-auto px-4">
-          <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-              <div class="flex items-center mb-4">
+          <div
+            class="product-card kawaii-shadow bg-white rounded-3xl overflow-hidden fade-in discount-card relative"
+          >
+            <div class="discount-badge">-20%</div>
+            <div class="h-48 overflow-hidden relative">
+              <div
+                class="w-full h-full flex items-center justify-center"
+                style="background-color: var(--color-pink)"
+              >
+                <span class="text-6xl">🦄</span>
+              </div>
+              <div
+                class="absolute top-2 left-2 w-8 h-8 rounded-full flex items-center justify-center"
+                style="background-color: var(--color-purple)"
+              >
+                <span class="text-lg">🦄</span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center mb-2">
                 <div
-                  class="w-12 h-12 rounded-full flex items-center justify-center mr-3"
+                  class="w-8 h-8 rounded-full flex items-center justify-center mr-2"
                   style="background-color: var(--color-pink)"
                 >
-                  <span class="text-2xl">💖</span>
+                  <span class="text-lg">🌸</span>
                 </div>
-                <h2 class="text-3xl font-bold" style="color: #ff85a2">
-                  Sobre Monclay
-                </h2>
+                <h3 class="font-bold text-lg">Llavero Unicornio</h3>
               </div>
-
-              <p class="mb-4 text-gray-600">
-                En Monclay, creamos productos kawaii hechos con amor y
-                dedicación. Cada pieza es única y está diseñada para llevar
-                alegría y color a tu vida diaria.
-              </p>
-
-              <p class="mb-6 text-gray-600">
-                Nos especializamos en porcelana fría, madera y acrílico cortados
-                con láser, y cajas de madera pintadas a mano. Todos nuestros
-                productos son creados con materiales de alta calidad y con mucha
-                atención al detalle.
-              </p>
-
-              <div class="flex items-center mb-4">
+              <div class="flex items-center mb-2">
+                <span class="text-lg font-bold line-through text-gray-400 mr-2"
+                  >$10.99</span
+                >
+                <span class="text-lg font-bold" style="color: #ffbae5"
+                  >$8.79</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-sm py-1 px-3 rounded-full"
+                  style="background-color: var(--color-purple)"
+                  >Porcelana Fría</span
+                >
+                <div class="flex space-x-2">
+                  <button
+                    class="add-to-cart-main kawaii-button p-2 rounded-full"
+                    style="background-color: var(--color-pink)"
+                    data-id="d1"
+                  >
+                    <span class="text-xl">🛒</span>
+                  </button>
+                  <button
+                    class="view-product kawaii-button p-2 rounded-full"
+                    style="background-color: var(--color-blue)"
+                    data-id="d1"
+                  >
+                    <span class="text-xl">👁️</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card kawaii-shadow bg-white rounded-3xl overflow-hidden fade-in discount-card relative"
+          >
+            <div class="discount-badge">-15%</div>
+            <div class="h-48 overflow-hidden relative">
+              <div
+                class="w-full h-full flex items-center justify-center"
+                style="background-color: var(--color-blue)"
+              >
+                <span class="text-6xl">🌈</span>
+              </div>
+              <div
+                class="absolute top-2 left-2 w-8 h-8 rounded-full flex items-center justify-center"
+                style="background-color: var(--color-blue)"
+              >
+                <span class="text-lg">🌈</span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center mb-2">
+                <div
+                  class="w-8 h-8 rounded-full flex items-center justify-center mr-2"
+                  style="background-color: var(--color-pink)"
+                >
+                  <span class="text-lg">🌸</span>
+                </div>
+                <h3 class="font-bold text-lg">Caja Arcoíris</h3>
+              </div>
+              <div class="flex items-center mb-2">
+                <span class="text-lg font-bold line-through text-gray-400 mr-2"
+                  >$24.99</span
+                >
+                <span class="text-lg font-bold" style="color: #ff85a2"
+                  >$21.24</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-sm py-1 px-3 rounded-full"
+                  style="background-color: var(--color-mint)"
+                  >Cajas Pintadas</span
+                >
+                <div class="flex space-x-2">
+                  <button
+                    class="add-to-cart-main kawaii-button p-2 rounded-full"
+                    style="background-color: var(--color-pink)"
+                    data-id="d2"
+                  >
+                    <span class="text-xl">🛒</span>
+                  </button>
+                  <button
+                    class="view-product kawaii-button p-2 rounded-full"
+                    style="background-color: var(--color-blue)"
+                    data-id="d2"
+                  >
+                    <span class="text-xl">👁️</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card kawaii-shadow bg-white rounded-3xl overflow-hidden fade-in discount-card relative"
+          >
+            <div class="discount-badge">-25%</div>
+            <div class="h-48 overflow-hidden relative">
+              <div
+                class="w-full h-full flex items-center justify-center"
+                style="background-color: var(--color-green)"
+              >
+                <span class="text-6xl">🌟</span>
+              </div>
+              <div
+                class="absolute top-2 left-2 w-8 h-8 rounded-full flex items-center justify-center"
+                style="background-color: var(--color-green)"
+              >
+                <span class="text-lg">🌟</span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center mb-2">
+                <div
+                  class="w-8 h-8 rounded-full flex items-center justify-center mr-2"
+                  style="background-color: var(--color-pink)"
+                >
+                  <span class="text-lg">🌸</span>
+                </div>
+                <h3 class="font-bold text-lg">Llavero Estrella</h3>
+              </div>
+              <div class="flex items-center mb-2">
+                <span class="text-lg font-bold line-through text-gray-400 mr-2"
+                  >$8.50</span
+                >
+                <span class="text-lg font-bold" style="color: #ff85a2"
+                  >$6.38</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-sm py-1 px-3 rounded-full"
+                  style="background-color: var(--color-green)"
+                  >Acrílico Láser</span
+                >
+                <div class="flex space-x-2">
+                  <button
+                    class="add-to-cart-main kawaii-button p-2 rounded-full"
+                    style="background-color: var(--color-pink)"
+                    data-id="d3"
+                  >
+                    <span class="text-xl">🛒</span>
+                  </button>
+                  <button
+                    class="view-product kawaii-button p-2 rounded-full"
+                    style="background-color: var(--color-blue)"
+                    data-id="d3"
+                  >
+                    <span class="text-xl">👁️</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card kawaii-shadow bg-white rounded-3xl overflow-hidden fade-in discount-card relative"
+          >
+            <div class="discount-badge">-30%</div>
+            <div class="h-48 overflow-hidden relative">
+              <div
+                class="w-full h-full flex items-center justify-center"
+                style="background-color: var(--color-yellow)"
+              >
+                <span class="text-6xl">🍰</span>
+              </div>
+              <div
+                class="absolute top-2 left-2 w-8 h-8 rounded-full flex items-center justify-center"
+                style="background-color: var(--color-yellow)"
+              >
+                <span class="text-lg">🍰</span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center mb-2">
+                <div
+                  class="w-8 h-8 rounded-full flex items-center justify-center mr-2"
+                  style="background-color: var(--color-pink)"
+                >
+                  <span class="text-lg">🌸</span>
+                </div>
+                <h3 class="font-bold text-lg">Posavasos Pastel</h3>
+              </div>
+              <div class="flex items-center mb-2">
+                <span class="text-lg font-bold line-through text-gray-400 mr-2"
+                  >$15.99</span
+                >
+                <span class="text-lg font-bold" style="color: #ff85a2"
+                  >$11.19</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-sm py-1 px-3 rounded-full"
+                  style="background-color: var(--color-blue)"
+                  >Madera Láser</span
+                >
+                <div class="flex space-x-2">
+                  <button
+                    class="add-to-cart-main kawaii-button p-2 rounded-full"
+                    style="background-color: var(--color-pink)"
+                    data-id="d4"
+                  >
+                    <span class="text-xl">🛒</span>
+                  </button>
+                  <button
+                    class="view-product kawaii-button p-2 rounded-full"
+                    style="background-color: var(--color-blue)"
+                    data-id="d4"
+                  >
+                    <span class="text-xl">👁️</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="products-container"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+      ></div>
+    </main>
+    <section class="bg-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+            <div class="flex items-center mb-4">
+              <img
+                src="images/1.png"
+                alt="Monclay Logo"
+                class="w-12 h-12 mr-3 rounded-full object-cover border-2 border-pink-300"
+              />
+              <h2 class="text-3xl font-bold text-pink-400">Sobre Monclay</h2>
+            </div>
+            <p class="mb-4 text-gray-600">
+              En Monclay, creamos productos hechos con amor y dedicación. Cada
+              pieza es única y está diseñada para llevar alegría y color a tu
+              vida diaria.
+            </p>
+            <p class="mb-6 text-gray-600">
+              Nos especializamos en porcelana fría, madera y acrílico cortados
+              con láser, y cajas de madera pintadas a mano. Todos nuestros
+              productos son creados con materiales de alta calidad y con mucha
+              atención al detalle.
+            </p>
+            <div class="flex items-center mb-4">
+              <div
+                class="w-8 h-8 rounded-full flex items-center justify-center mr-2 bg-blue-300"
+              >
+                <span class="text-lg">📍</span>
+              </div>
+              <div>
+                <h3 class="font-bold">Ubicación</h3>
+                <p class="text-gray-600">Plantation, Florida</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div
+                class="w-8 h-8 rounded-full flex items-center justify-center mr-2 bg-green-300"
+              >
+                <span class="text-lg">🚚</span>
+              </div>
+              <div>
+                <h3 class="font-bold">Envíos</h3>
+                <p class="text-gray-600">
+                  Realizamos envíos a todo Estados Unidos
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-[350px]">
+            <img src="images/1.png" alt="Productos Monclay" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-white kawaii-shadow relative">
+      <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-6 md:mb-0">
+            <div class="flex items-center mb-3">
+              <img
+                src="images/1.png"
+                alt="Icono Monclay"
+                class="w-8 h-8 mr-2"
+              />
+              <div class="text-2xl font-bold" style="color: hsl(346, 97%, 86%)">
+                Monclay
+              </div>
+            </div>
+            <p class="text-sm max-w-xs">
+              Productos kawaii hechos con amor. Porcelana fría, madera y
+              acrílico cortados con láser, y cajas de madera pintadas a mano.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="font-bold mb-3">Productos</h3>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <a href="#" class="hover:text-pink-500">Porcelana Fría</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-pink-500">Madera Láser</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-pink-500">Acrílico Láser</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-pink-500">Cajas Pintadas</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-pink-500">Descuentos</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold mb-3">Ayuda</h3>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <a href="#" class="hover:text-pink-500">Contacto</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-pink-500">Envíos</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-pink-500">Devoluciones</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-pink-500">FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-span-2 md:col-span-1">
+              <h3 class="font-bold mb-3">Síguenos</h3>
+              <div class="flex space-x-4 mb-4">
+                <a
+                  href="#"
+                  class="kawaii-button p-2 rounded-full"
+                  style="background-color: var(--color-blue)"
+                  ><span class="text-xl">📱</span></a
+                >
+                <a
+                  href="#"
+                  class="kawaii-button p-2 rounded-full"
+                  style="background-color: var(--color-purple)"
+                  ><span class="text-xl">📸</span></a
+                >
+                <a
+                  href="#"
+                  class="kawaii-button p-2 rounded-full"
+                  style="background-color: var(--color-pink)"
+                  ><span class="text-xl">🎵</span></a
+                >
+                <a
+                  href="#"
+                  class="kawaii-button p-2 rounded-full"
+                  style="background-color: var(--color-green)"
+                  ><span class="text-xl">💬</span></a
+                >
+              </div>
+              <div class="flex items-center">
                 <div
                   class="w-8 h-8 rounded-full flex items-center justify-center mr-2"
                   style="background-color: var(--color-blue)"
                 >
                   <span class="text-lg">📍</span>
                 </div>
-                <div>
-                  <h3 class="font-bold">Ubicación</h3>
-                  <p class="text-gray-600">Plantation, Florida</p>
-                </div>
-              </div>
-
-              <div class="flex items-center">
-                <div
-                  class="w-8 h-8 rounded-full flex items-center justify-center mr-2"
-                  style="background-color: var(--color-green)"
-                >
-                  <span class="text-lg">🚚</span>
-                </div>
-                <div>
-                  <h3 class="font-bold">Envíos</h3>
-                  <p class="text-gray-600">
-                    Realizamos envíos a todo Estados Unidos
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="md:w-1/2 flex justify-center">
-              <!-- Logo grande de Monclay -->
-              <div class="relative w-64 h-64 md:w-80 md:h-80">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fill="#FFD1DC"
-                    d="M45.7,-53.8C59.1,-42.7,70,-28.5,73.3,-12.7C76.7,3.1,72.5,20.5,63.2,34.1C53.9,47.7,39.5,57.5,23.4,63.9C7.3,70.3,-10.5,73.3,-26.9,68.7C-43.3,64.1,-58.3,51.9,-67.1,36.1C-75.9,20.3,-78.5,0.9,-73.9,-16.2C-69.3,-33.3,-57.5,-48,-43.2,-59C-28.9,-70,-14.5,-77.3,0.5,-77.9C15.4,-78.5,32.3,-64.9,45.7,-53.8Z"
-                    transform="translate(100 100)"
-                  ></path>
-                </svg>
-
-                <!-- Texto del logo -->
-                <div
-                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
-                >
-                  <div class="text-5xl font-bold" style="color: #ff85a2">
-                    <span class="text-6xl">🌸</span>
-                  </div>
-                  <div class="text-3xl font-bold mt-2" style="color: #ff85a2">
-                    Monclay
-                  </div>
-                  <div class="text-lg mt-1 text-gray-600">Kawaii Crafts</div>
+                <div class="text-sm">
+                  <p>Plantation, Florida</p>
+                  <p>Envíos a todo Estados Unidos</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="bg-white kawaii-shadow relative">
-        <div class="container mx-auto px-4 py-8">
-          <div class="flex flex-col md:flex-row justify-between">
-            <div class="mb-6 md:mb-0">
-              <div class="flex items-center mb-3">
-                <div class="text-2xl font-bold" style="color: #ff85a2">
-                  <span class="text-3xl">🌸</span> Monclay
-                </div>
-              </div>
-              <p class="text-sm max-w-xs">
-                Productos kawaii hechos con amor. Porcelana fría, madera y
-                acrílico cortados con láser, y cajas de madera pintadas a mano.
-              </p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-              <div>
-                <h3 class="font-bold mb-3">Productos</h3>
-                <ul class="space-y-2 text-sm">
-                  <li>
-                    <a href="#" class="hover:text-pink-500">Porcelana Fría</a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-pink-500">Madera Láser</a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-pink-500">Acrílico Láser</a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-pink-500">Cajas Pintadas</a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-pink-500">Descuentos</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="font-bold mb-3">Ayuda</h3>
-                <ul class="space-y-2 text-sm">
-                  <li><a href="#" class="hover:text-pink-500">Contacto</a></li>
-                  <li><a href="#" class="hover:text-pink-500">Envíos</a></li>
-                  <li>
-                    <a href="#" class="hover:text-pink-500">Devoluciones</a>
-                  </li>
-                  <li><a href="#" class="hover:text-pink-500">FAQ</a></li>
-                </ul>
-              </div>
-
-              <div class="col-span-2 md:col-span-1">
-                <h3 class="font-bold mb-3">Síguenos</h3>
-                <div class="flex space-x-4 mb-4">
-                  <a
-                    href="#"
-                    class="kawaii-button p-2 rounded-full"
-                    style="background-color: var(--color-blue)"
-                  >
-                    <span class="text-xl">📱</span>
-                  </a>
-                  <a
-                    href="#"
-                    class="kawaii-button p-2 rounded-full"
-                    style="background-color: var(--color-purple)"
-                  >
-                    <span class="text-xl">📸</span>
-                  </a>
-                  <a
-                    href="#"
-                    class="kawaii-button p-2 rounded-full"
-                    style="background-color: var(--color-pink)"
-                  >
-                    <span class="text-xl">🎵</span>
-                  </a>
-                  <a
-                    href="#"
-                    class="kawaii-button p-2 rounded-full"
-                    style="background-color: var(--color-green)"
-                  >
-                    <span class="text-xl">💬</span>
-                  </a>
-                </div>
-
-                <div class="flex items-center">
-                  <div
-                    class="w-8 h-8 rounded-full flex items-center justify-center mr-2"
-                    style="background-color: var(--color-blue)"
-                  >
-                    <span class="text-lg">📍</span>
-                  </div>
-                  <div class="text-sm">
-                    <p>Plantation, Florida</p>
-                    <p>Envíos a todo Estados Unidos</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="border-t border-gray-200 mt-8 pt-6 text-center text-sm">
-            <p>© 2023 Monclay. Todos los derechos reservados.</p>
-          </div>
+        <div class="border-t border-gray-200 mt-8 pt-6 text-center text-sm">
+          <p>© 2023 Monclay. Todos los derechos reservados.</p>
         </div>
-      </footer>
-
-      <!-- Cart Sidebar -->
-      <div
-        id="cart-sidebar"
-        class="fixed top-0 right-0 h-full w-full md:w-96 bg-white kawaii-shadow transform translate-x-full transition-transform duration-300 ease-in-out z-50"
-      >
-        <div class="h-full flex flex-col">
-          <div
-            class="p-4 border-b"
-            style="background-color: var(--color-yellow)"
-          >
-            <div class="flex justify-between items-center">
-              <h2 class="text-xl font-bold">Tu Carrito 🛒</h2>
-              <button
-                id="close-cart"
-                class="kawaii-button p-2 rounded-full"
-                style="background-color: var(--color-pink)"
-              >
-                <span class="text-xl">✖️</span>
-              </button>
-            </div>
-          </div>
-
-          <div id="cart-items" class="flex-grow overflow-y-auto p-4 space-y-4">
-            <!-- Cart items will be dynamically inserted here -->
-            <div class="flex justify-center items-center h-full text-gray-400">
-              <div class="text-center">
-                <div class="text-5xl mb-3">🛍️</div>
-                <p>Tu carrito está vacío</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-4 border-t" style="background-color: var(--color-blue)">
-            <div class="flex justify-between mb-4">
-              <span class="font-bold">Total:</span>
-              <span id="cart-total" class="font-bold">$0.00</span>
-            </div>
+      </div>
+    </footer>
+    <div
+      id="cart-sidebar"
+      class="fixed top-0 right-0 h-full w-full md:w-96 bg-white kawaii-shadow transform translate-x-full transition-transform duration-300 ease-in-out z-50"
+    >
+      <div class="h-full flex flex-col">
+        <div class="p-4 border-b" style="background-color: var(--color-yellow)">
+          <div class="flex justify-between items-center">
+            <h2 class="text-xl font-bold">Tu Carrito 🛒</h2>
             <button
-              class="kawaii-button w-full py-3 rounded-full font-bold text-white"
-              style="background-color: #ff85a2"
+              id="close-cart"
+              class="kawaii-button p-2 rounded-full"
+              style="background-color: var(--color-pink)"
             >
-              Finalizar Compra
+              <span class="text-xl">✖️</span>
             </button>
           </div>
         </div>
-      </div>
-
-      <!-- Product Modal -->
-      <div
-        id="product-modal"
-        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
-      >
-        <div
-          class="bg-white rounded-3xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto"
-        >
-          <div class="p-6">
-            <div class="flex justify-end">
-              <button
-                id="close-modal"
-                class="kawaii-button p-2 rounded-full"
-                style="background-color: var(--color-pink)"
-              >
-                <span class="text-xl">✖️</span>
-              </button>
+        <div id="cart-items" class="flex-grow overflow-y-auto p-4 space-y-4">
+          <div class="flex justify-center items-center h-full text-gray-400">
+            <div class="text-center">
+              <div class="text-5xl mb-3">🛍️</div>
+              <p>Tu carrito está vacío</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
+          </div>
+        </div>
+        <div class="p-4 border-t" style="background-color: var(--color-blue)">
+          <div class="flex justify-between mb-4">
+            <span class="font-bold">Total:</span>
+            <span id="cart-total" class="font-bold">$0.00</span>
+          </div>
+          <button
+            class="kawaii-button w-full py-3 rounded-full font-bold text-white"
+            style="background-color: #ffb5c6"
+          >
+            Finalizar Compra
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      id="product-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto"
+      >
+        <div class="p-6">
+          <div class="flex justify-end">
+            <button
+              id="close-modal"
+              class="kawaii-button p-2 rounded-full"
+              style="background-color: var(--color-pink)"
+            >
+              <span class="text-xl">✖️</span>
+            </button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <div
+                id="modal-main-image"
+                class="w-full h-64 md:h-80 rounded-2xl bg-gray-100 mb-4 overflow-hidden"
+              ></div>
+              <div id="modal-image-selectors" class="flex space-x-3"></div>
+            </div>
+            <div>
+              <div class="flex items-center mb-4">
                 <div
-                  id="modal-main-image"
-                  class="w-full h-64 md:h-80 rounded-2xl bg-gray-100 mb-4 overflow-hidden"
+                  class="w-12 h-12 rounded-full flex items-center justify-center mr-3"
+                  style="background-color: var(--color-pink)"
                 >
-                  <!-- Main image will be set here -->
+                  <span class="text-2xl">🌸</span>
                 </div>
-
-                <div id="modal-image-selectors" class="flex space-x-3">
-                  <!-- Image selectors will be dynamically inserted here -->
-                </div>
+                <h2 id="modal-title" class="text-2xl font-bold"></h2>
               </div>
-
-              <div>
-                <div class="flex items-center mb-4">
-                  <!-- Logo pequeño junto al título -->
-                  <div
-                    class="w-12 h-12 rounded-full flex items-center justify-center mr-3"
-                    style="background-color: var(--color-pink)"
+              <div
+                id="modal-price"
+                class="text-xl font-bold mb-4"
+                style="color: #ffcad6"
+              ></div>
+              <div id="modal-description" class="mb-6 text-gray-600"></div>
+              <div class="flex items-center mb-6">
+                <div class="mr-4">
+                  <label
+                    for="modal-quantity"
+                    class="block text-sm font-medium mb-1"
+                    >Cantidad</label
                   >
-                    <span class="text-2xl">🌸</span>
-                  </div>
-                  <h2 id="modal-title" class="text-2xl font-bold"></h2>
-                </div>
-
-                <div
-                  id="modal-price"
-                  class="text-xl font-bold mb-4"
-                  style="color: #ff85a2"
-                ></div>
-
-                <div id="modal-description" class="mb-6 text-gray-600"></div>
-
-                <div class="flex items-center mb-6">
-                  <div class="mr-4">
-                    <label
-                      for="modal-quantity"
-                      class="block text-sm font-medium mb-1"
-                      >Cantidad</label
+                  <div class="flex items-center">
+                    <button
+                      id="decrease-quantity"
+                      class="kawaii-button p-2 rounded-l-full"
+                      style="background-color: var(--color-blue)"
                     >
-                    <div class="flex items-center">
-                      <button
-                        id="decrease-quantity"
-                        class="kawaii-button p-2 rounded-l-full"
-                        style="background-color: var(--color-blue)"
-                      >
-                        <span class="text-xl">➖</span>
-                      </button>
-                      <input
-                        id="modal-quantity"
-                        type="number"
-                        min="1"
-                        value="1"
-                        class="w-12 text-center border-y py-2"
-                      />
-                      <button
-                        id="increase-quantity"
-                        class="kawaii-button p-2 rounded-r-full"
-                        style="background-color: var(--color-blue)"
-                      >
-                        <span class="text-xl">➕</span>
-                      </button>
-                    </div>
+                      <span class="text-xl">➖</span>
+                    </button>
+                    <input
+                      id="modal-quantity"
+                      type="number"
+                      min="1"
+                      value="1"
+                      class="w-12 text-center border-y py-2"
+                    />
+                    <button
+                      id="increase-quantity"
+                      class="kawaii-button p-2 rounded-r-full"
+                      style="background-color: var(--color-blue)"
+                    >
+                      <span class="text-xl">➕</span>
+                    </button>
                   </div>
                 </div>
-
-                <button
-                  id="add-to-cart-modal"
-                  class="kawaii-button w-full py-3 rounded-full font-bold text-white"
-                  style="background-color: #ff85a2"
-                >
-                  Añadir al Carrito
-                </button>
               </div>
+              <button
+                id="add-to-cart-modal"
+                class="kawaii-button w-full py-3 rounded-full font-bold text-white"
+                style="background-color: #ff85a2"
+              >
+                Añadir al Carrito
+              </button>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Overlay for background when modal or cart is open -->
-      <div
-        id="overlay"
-        class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
-      ></div>
     </div>
-
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
+    ></div>
     <script>
       // Sample product data
       const products = [
